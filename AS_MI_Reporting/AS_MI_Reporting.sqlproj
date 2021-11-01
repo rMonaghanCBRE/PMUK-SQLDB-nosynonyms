@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>AS_MI_Reporting</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ae23cea2-70ea-40fb-9a01-1eb883f5d100}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>AS_MI_Reporting</RootNamespace>
+    <AssemblyName>AS_MI_Reporting</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <CreateProjectFromDatabaseCompleted>True</CreateProjectFromDatabaseCompleted>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Synonyms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_TransitionsExtended.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_Arrears_MandG_RL.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_Arrears_MandG.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_PCD_Custom.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_PCD_DistinctNameValues.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_Arrears_MandG.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_arrears_DW.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TABLEAU_FeeDebt.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafetyCorporate_AI.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafetyCorporate_CS.sql" />
+    <Build Include="dbo\Tables\PM_UK_BusinessMetrics_Category.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafetyCorporate_CC.sql" />
+    <Build Include="dbo\Tables\PM_UK_BusinessMetrics_Metric.sql" />
+    <Build Include="dbo\Tables\PM_UK_BusinessMetrics_Section.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafety_OA.sql" />
+    <Build Include="dbo\Tables\PM_UK_BusinessMetrics_Type.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafetyCorporate_OA.sql" />
+    <Build Include="dbo\Tables\CBRE_OfficeLocations.sql" />
+    <Build Include="dbo\Tables\PM_UK_BusinessMetrics_Data.sql" />
+    <Build Include="dbo\Tables\PM_UK_BusinessMetrics_GL_Mapping.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafety_AI.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafety_CC.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafety_CS.sql" />
+    <Build Include="dbo\Tables\NationalStatistics_PostcodeLocalAuthorityDistricts.sql" />
+    <Build Include="dbo\Tables\NationalStatistics_PostcodeLookup.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_HealthAndSafety_PCD_ID.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_KPI_Client.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_KPI_Teams.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_FeeDebtFolderShare.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_ServiceCharge_Budget.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_ServiceCharge_Completed.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_ServiceCharge_Income.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_ServiceCharge_PCD_ID.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_ServiceCharge_Stages.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_ServiceCharge_YearEnd.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_Arrears.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_CompaniesHouseBasicData.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_HealthAndSafety_AI.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_STAGING_FeeDebtSharePointList.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_PCD_Custom.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_HealthAndSafety_C.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TABLEAU_CollectionsServiceCharge.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_HealthAndSafety_OA.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_LeaseEvent_k2.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TABLEAU_CollectionsRent.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_LowFundsReport_CreditorBalance.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_LowFundsReport_SummaryDetail.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_P2P_Invoices.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_ServiceCharge_Budget.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_ServiceCharge_YearEnd.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_Suspense.sql" />
+    <Build Include="dbo\Tables\MI_REPORTING_TRENDING_TenancySchedule.sql" />
+    <Build Include="Security\db_executor.sql" />
+    <Build Include="dbo\Stored Procedures\pr_mi_reporting_PCD_distinct_values.sql" />
+    <Build Include="dbo\Stored Procedures\pr_mi_reporting_PCD_name_changes.sql" />
+    <Build Include="dbo\Stored Procedures\pr_insert_FeeDebtFolderShare_data.sql" />
+    <Build Include="dbo\Stored Procedures\pr_get_Arrears_MandG_RL.sql" />
+    <Build Include="dbo\Stored Procedures\pr_get_Arrears_MandG_Extended.sql" />
+  </ItemGroup>
+</Project>

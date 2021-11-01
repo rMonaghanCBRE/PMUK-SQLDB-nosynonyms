@@ -1,0 +1,8 @@
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\bin\Debug\AS_MI_Reporting.dacpac
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\obj\Debug\AS_MI_Reporting.sqlproj.AssemblyReference.cache
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\obj\Debug\Model.xml
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\obj\Debug\refactor.xml
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\obj\Debug\postdeploy.sql
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\obj\Debug\predeploy.sql
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\obj\Debug\AS_MI_Reporting.dll
+C:\repos\PMUK-SQLDB-nosynonyms\AS_MI_Reporting\obj\Debug\AS_MI_Reporting.pdb

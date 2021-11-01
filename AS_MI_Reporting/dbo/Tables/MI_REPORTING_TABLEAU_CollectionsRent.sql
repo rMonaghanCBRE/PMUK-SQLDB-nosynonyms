@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[MI_REPORTING_TABLEAU_CollectionsRent] (
+    [MI_ID]                   INT             IDENTITY (1, 1) NOT NULL,
+    [Data Date]               DATE            NULL,
+    [Quarter Description]     NVARCHAR (600)  NULL,
+    [Accounting DB]           NVARCHAR (600)  NULL,
+    [Client Parent Name]      NVARCHAR (600)  NULL,
+    [Client Parent Ref]       NVARCHAR (600)  NULL,
+    [Client Name]             NVARCHAR (600)  NULL,
+    [Client Ref]              NVARCHAR (600)  NULL,
+    [Property Name]           NVARCHAR (600)  NULL,
+    [Property Ref]            NVARCHAR (600)  NULL,
+    [Debtor Ref]              NVARCHAR (600)  NULL,
+    [Invoice Ref]             NVARCHAR (600)  NULL,
+    [Charge Type]             NVARCHAR (600)  NULL,
+    [Invoiced Amount]         DECIMAL (18, 2) NULL,
+    [Total Arrears]           DECIMAL (18, 2) NULL,
+    [Unpaid Amount]           DECIMAL (18, 2) NULL,
+    [Paid Amount]             DECIMAL (18, 2) NULL,
+    [Property Insurance Type] NVARCHAR (600)  NULL,
+    [Cube Category]           NVARCHAR (600)  NULL,
+    [Sub-Category]            NVARCHAR (600)  NULL,
+    [Scheme Allocation]       NVARCHAR (600)  NULL,
+    CONSTRAINT [MI_ID36_pk] PRIMARY KEY CLUSTERED ([MI_ID] ASC)
+);
+
